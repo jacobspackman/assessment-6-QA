@@ -1,16 +1,22 @@
 const shuffle = require("../src/shuffle");
 
-describe("shuffle should return a random 5 items from the bot array", () => {
+describe("shuffle should...", () => {
   
   test("shuffle should return array", () => {
-    expect(shuffle.copyArray.length).toBe(10)
+
+    const result = shuffle()
+    expect(Array.isArray(result)).toBe(true)
     
   })
 
-  test("shuffle should return the amount of objects same as the argument sent in", () => {
-    expect(shuffle.res.length).toBe(shuffle.length)
+  test("return the amount of objects same as the argument sent in", () => {
+
+    let toolArr = [34, 65, 69, 420, 898237985];
+
+    let shuffledArr = shuffle(toolArr);
+
+    expect(shuffledArr.length).toBe(toolArr.length);
   })
 
 });
 
-console.log(shuffle.copyArray)
